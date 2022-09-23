@@ -4,22 +4,18 @@ import {useState, useEffect,useRef} from "react"
 
 function SearchMovies(){
 
-	const [movies, setMovies] = useState([])
 	const [keyword, setKeyword] = useState("avatar")
+	const [movies, setMovies] = useState([])
 	const apiKey = '7e31b006'; // Intenta poner cualquier cosa antes para probar
 	const searchValue = useRef()
 
 	useEffect(()=> {
-		fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${keyword}`)
+		fetch(`http://localhost:3000/api/products/22`)
 		.then(response => response.json())
 			.then(movies => { 
-				if(!movies.Search) {
-					setMovies([])}
-					else {
-					setMovies(movies.Search)}})
-	},[keyword])
-
-	
+					setMovies(movies)})
+					console.log(movies)
+	},[])
 	const button = (e) => {
 		e.preventDefault()
 		setKeyword (searchValue.current.value)
@@ -55,14 +51,14 @@ function SearchMovies(){
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
 											<div className="card-header py-3">
-												<h5 className="m-0 font-weight-bold text-gray-800">{movie.Title}</h5>
+												<h5 className="m-0 font-weight-bold text-gray-800">{movie.pdtName}</h5>
 											</div>
 											<div className="card-body">
 												<div className="text-center">
 													<img 
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
-														src={movie.Poster}
-														alt={movie.Title} 
+														src={movie.pdtImage}
+														alt={movie.pdtName} 
 														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
 												</div>

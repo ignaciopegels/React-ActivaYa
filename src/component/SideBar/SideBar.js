@@ -32,7 +32,7 @@ function SideBar() {
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
 				<Link className="nav-link collapsed" to="/genres">
-				<i class="fas fa-user"></i>
+				<i className="fas fa-user"></i>
 					<span>Usuarios</span>
 				</Link>
 				
@@ -40,14 +40,14 @@ function SideBar() {
 
 			<li className="nav-item">
 				<Link className="nav-link" to="/etiquetas">
-				<i class="fas fa-store"></i>
+				<i className="fas fa-store"></i>
 					<span>Productos</span></Link>
 			</li>
 
 			{/* <!-- Nav Item - Tables --> */}
 			<li className="nav-item">
 				<Link className="nav-link" to="/tabla">
-				<i class="fas fa-tags"></i>
+				<i className="fas fa-tags"></i>
 					<span>Categoria</span></Link>
 			</li>
 			<li className="nav-item">

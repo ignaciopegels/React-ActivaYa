@@ -18,7 +18,7 @@ return (
 						{/* <!-- Nav Item - Alerts --> */}
 						<li className="nav-item dropdown no-arrow mx-4">
 							<a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
-							<i class="fas fa-bell"></i>
+							<i className="fas fa-bell"></i>
 								{/* <!-- Counter - Alerts --> */}
 								<span className="badge badge-danger badge-counter">3+</span>
 							</a>

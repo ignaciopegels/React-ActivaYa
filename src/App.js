@@ -9,7 +9,8 @@ import Tabla from "../src/component/ContentWrapper/ContentRowTop/Tables/tabla"
 import {Route} from "react-router-dom"
 import EtiquetaMovie from "./component/ContentWrapper/ContentRowTop/ContentRowMovies/datosMovie"
 import GenresInDb from "./component/ContentWrapper/ContentRowTop/GenresInDb/GenresInDb"
-import SearchMovies from "./component/ContentWrapper/Search/SearchMovies"
+// import SearchMovies from "./component/ContentWrapper/Search/SearchMovies"
+import BuscarProducto from "./component/ContentWrapper/Search/TotalProduct"
 function App() {
   return (
   <div id="wrapper">
@@ -22,7 +23,8 @@ function App() {
 		<Route path="/" component={TopBar} />
 
 		<Route path="/" exact={true} component={ContentRowTop}/>
-		<Route path="/search" component={SearchMovies}/>
+		
+		<Route path="/search" component={BuscarProducto}/>
 
 		<Route path="/genres" component= {GenresInDb}/>
     

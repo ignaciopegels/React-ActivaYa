@@ -11,21 +11,21 @@ class GenresInDb extends Component{
     handleClick = () => {
       document.querySelector(".fondoCaja").classList.add("bg-secondary")
     }
-    componentDidMount(){
+    // componentDidMount(){
 
-      fetch('http://localhost:3001/api/genres')
-      .then(respuesta =>{
-      return respuesta.json()
-      })
-      .then(genres =>{
-      this.setState({genresList: genres.data})
-      })
-      .catch(error => console.log(error))
-      }
+    //   fetch('http://localhost:3001/api/genres')
+    //   .then(respuesta =>{
+    //   return respuesta.json()
+    //   })
+    //   .then(genres =>{
+    //   this.setState({genresList: genres.data})
+    //   })
+    //   .catch(error => console.log(error))
+    //   }
       render(){
         return (
           <React.Fragment>
-            <div className="card-header py-3">
+            {/* <div className="card-header py-3">
               <h5 onMouseOver={this.handleClick} className="m-0 font-weight-bold text-gray-800">
                 Genres in Data Base
               </h5>
@@ -37,7 +37,7 @@ class GenresInDb extends Component{
                 })}
                 
               </div>
-            </div>
+            </div> */}
           </React.Fragment>
         );
       }}

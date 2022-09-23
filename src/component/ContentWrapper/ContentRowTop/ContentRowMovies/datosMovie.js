@@ -12,12 +12,6 @@ const dataMovies = [{
     cifra: "10",
     color:"success", 
     icono:"fas fa-film fa-2x text-gray-300" 
-  },
-  {
-    titulo:"Actors quantity",
-    cifra: 43,
-    color:"warning", 
-    icono:"fas fa-film fa-2x text-gray-300" 
   }
   ] 
 
