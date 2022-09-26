@@ -20,31 +20,29 @@ function SideBar() {
 			<li className="nav-item active">
 				<Link className="nav-link" to="/" exact="true">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span></Link>
+					<span>Dashboard - ActivaYa</span></Link>
 			</li>
 
 			{/* <!-- Divider --> */}
-			<hr className="sidebar-divider"/>
+			{/* <hr className="sidebar-divider"/> */}
 
 			{/* <!-- Heading --> */}
-			<div className="sidebar-heading">Actions</div>
+			{/* <div className="sidebar-heading">Actions</div> */}
 
 			{/* <!-- Nav Item - Pages --> */}
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link className="nav-link collapsed" to="/genres">
 				<i className="fas fa-user"></i>
 					<span>Usuarios</span>
 				</Link>
-				
-			</li>
+			</li> */}
 
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link className="nav-link" to="/etiquetas">
 				<i className="fas fa-store"></i>
 					<span>Productos</span></Link>
-			</li>
-
-			{/* <!-- Nav Item - Tables --> */}
+			</li> */}
+{/* 			
 			<li className="nav-item">
 				<Link className="nav-link" to="/tabla">
 				<i className="fas fa-tags"></i>
@@ -54,9 +52,9 @@ function SideBar() {
 				<Link className="nav-link" to="/search">
 					<i className="fas fa-fw fa-search"></i>
 					<span>Search</span></Link>
-			</li>
+			</li> */}
 
-			{/* <!-- Divider --> */}
+			
 			<hr className="sidebar-divider d-none d-md-block"/>
 		</ul>
     )

@@ -5,7 +5,7 @@ import SideBar from "./component/SideBar/SideBar.js"
 import ContentRowTop from "./component/ContentWrapper/ContentRowTop/ContentRowTop"
 import Footer from "./component/ContentWrapper/Footer/Footer"
 import TopBar from "./component/ContentWrapper/TopBar/TopBar"
-import Tabla from "../src/component/ContentWrapper/ContentRowTop/Tables/tabla"
+import Tabla from "./component/ContentWrapper/ContentRowTop/Tables/tabla"
 import {Route} from "react-router-dom"
 import EtiquetaMovie from "./component/ContentWrapper/ContentRowTop/ContentRowMovies/datosMovie"
 import GenresInDb from "./component/ContentWrapper/ContentRowTop/GenresInDb/GenresInDb"
@@ -19,7 +19,7 @@ function App() {
 
 		<div id="content-wrapper" className="d-flex flex-column">
 
-			<div id="content">
+		<div id="content">
 		<Route path="/" component={TopBar} />
 
 		<Route path="/" exact={true} component={ContentRowTop}/>
