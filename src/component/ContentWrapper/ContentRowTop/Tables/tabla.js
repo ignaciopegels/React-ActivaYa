@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import Filas from "./Filas"
 
-class Movies extends Component {
+class TableProducts extends Component {
   constructor() {
   super()
   this.state ={
@@ -9,13 +9,13 @@ class Movies extends Component {
   }
 }
 componentDidMount(){
-fetch("http://localhost:3001/api/movies")
+fetch("http://localhost:5000/api/products")
 .then ((respuesta)=> {
   return respuesta.json()
 })
-.then((movies)=> {
-  this.setState({dataTable: movies.data})
-  console.log(movies.data)
+.then((products)=> {
+  this.setState({dataTable: products.products})
+  console.log(products.products)
 })
 .catch(error => console.log(error))
 }
@@ -25,15 +25,14 @@ render(){
   <thead>
     <tr>
       <th scope="col">Titulo</th>
-      <th scope="col">Duración</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Género</th>
-      <th scope="col">Premios</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Capacidad</th>
+      <th scope="col">Detalle URL</th>
     </tr>
   </thead>
   <tbody>
     {this.state.dataTable.map((element,e) => {
-      return  <Filas key={e+element}  titulo={element.title} duracion= {element.length} rating={element.rating} genero={element.genre?.name} premios= {element.awards}/>
+      return  <Filas key={e+element}  titulo={element.name} duracion= {element.price} rating={element.capacity} genero={element.detail} premios= {element.awards}/>
     } ) }
   </tbody>
 </table>
@@ -41,4 +40,4 @@ render(){
 }
 }
 
-export default Movies
+export default TableProducts
