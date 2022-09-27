@@ -31,12 +31,12 @@ function BuscarProducto(){
 					})},[])
 					let valor = ""
 					const categoryArray = Object.entries(category)
-					const categoryPrint = (categoryArray.map((element) => {return  valor = <h6>{`${element[0]} ${element[1]}`}</h6>}))
+					const categoryPrint = (categoryArray.map((element) => {return  valor = <h5 className="h5 mb-0 font-weight-bold text-gray-800">{`${element[0]} : ${element[1]}`}</h5>}))
 
 	return(
 		<React.Fragment>
 			<div className="row">
-			<ContentoRowMovies titulo={"Ultimo Producto creado"} icono={"fas fa-wine-bottle fa-2x text-gray-900"} > {ultimoProduct.map((element, index) => { return  index == (ultimoProduct.length -1)? <p class = "text-xs font-weight-bold text-">{element.name} <p>Precio ${element.price}</p>  </p>: "" })}</ContentoRowMovies>
+			<ContentoRowMovies titulo={"Ultimo Producto creado"} icono={"fas fa-wine-bottle fa-2x text-gray-900"} > {ultimoProduct.map((element, index) => { return  index == (ultimoProduct.length -1)? <p class = "h5 mb-0 font-weight-bold text-gray-800">{element.name} <p>Precio ${element.price}</p>  </p>: "" })}</ContentoRowMovies>
 			<ContentoRowMovies titulo={"total de productos"} cifra={products.length} icono={"fas fa-glass-cheers fa-2x text-gray-900"} />
            <ContentoRowMovies titulo={"total de Usuarios"} cifra={users.length} icono={"fas fas fa-users fa-2x text-gray-900"} />
 		   <ContentoRowMovies titulo={"Total de productos por categoria"} icono={"fas fa-shopping-basket fa-2x text-gray-900"}>{categoryPrint.map(element => element)}</ContentoRowMovies>
